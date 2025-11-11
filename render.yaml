@@ -1,0 +1,29 @@
+# Exported from Render on 2025-11-11T02:33:34Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: worker
+      name: EdgeX_Volume_Farming_Bot
+      runtime: docker
+      repo: https://github.com/kjunk12345/EdgeX_Volume_Farming_Bot
+      plan: starter
+      envVars:
+      - key: EDGEX_STARK_PRIVATE_KEY
+        sync: false
+      - key: EDGEX_GRID_STEP_USD
+        sync: false
+      - key: EDGEX_GRID_SIZE
+        sync: false
+      - key: EDGEX_GRID_LEVELS_PER_SIDE
+        sync: false
+      - key: EDGEX_GRID_FIRST_OFFSET_USD
+        sync: false
+      - key: EDGEX_ACCOUNT_ID
+        sync: false
+      region: oregon
+      dockerContext: .
+      dockerfilePath: ./Dockerfile
+      autoDeployTrigger: commit
