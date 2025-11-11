@@ -27,4 +27,4 @@ projects:
       region: oregon
       dockerContext: .
       dockerfilePath: ./Dockerfile
-      autoDeployTrigger: commit
+      autoDeployTrigger: "off"
