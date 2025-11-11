@@ -24,7 +24,7 @@ projects:
       - key: EDGEX_STARK_PRIVATE_KEY
         sync: false
         
-      region: Singapore 
+      region: singapore 
       dockerContext: .
       dockerfilePath: ./Dockerfile
       autoDeployTrigger: "off"
